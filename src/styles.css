@@ -1,0 +1,34 @@
+/* styles.css */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mayusculas {
+  text-transform: uppercase;
+}
+
+.fondo {
+linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
+url('assets/fondo-textura.jpg');
+  background-image: url('/imagenes/fondo.png'); /* ruta relativa o absoluta */
+  /* 2) Repite la textura, NO cover */
+  background-repeat: repeat;
+
+  /* 3) Tamaño de la “baldosa” de la textura: responsivo */
+  background-size: auto, clamp(140px, 18vw, 260px);
+
+  /* 4) Posición y ajuste */
+  background-position: top center;
+
+  /* 5) Que no se reinicie por sección (si el contenedor es alto) */
+  min-height: 100vh;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,458 @@
+.title-vestimenta {
+  font-family:'Parisienne', cursive;
+  font-size: clamp(2rem, 1vw, 1.35rem);
+  text-align: center;
+  margin-bottom:-2rem;
+}
+
+.subtittle-vestimenta {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding-top: 0
+}
+
+
+.img-vestimenta {
+  display: block;
+  margin: auto;
+  width: auto;
+  height: 190px;
+  padding-top: 1rem;
+}
+
+.recomendacion{
+  padding-top: 0;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+  max-width: 480px;
+  margin: 28px auto;
+  letter-spacing: 1px;
+
+}
+
+.title-nochild {
+  font-family:'Parisienne', cursive;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 6rem;
+  color: #333;
+  padding-bottom: 1rem;
+}
+
+.subttitle-nochild {
+  padding: 32px 20px 28px 20px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+  max-width: 480px;
+  margin: 28px auto;
+  letter-spacing: 1px;
+
+}
+
+.title-gifts
+{
+  font-family:'Parisienne', cursive;
+  font-size: clamp(24px, 4vw, 36px);
+  text-align: center;
+  color: #333;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+.container-gift{
+
+  padding: 32px 20px 28px 20px;
+  max-width: 480px;
+  margin: 28px auto;
+  letter-spacing: 1px;
+}
+
+.title-gift
+{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.subttitle-gift
+{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+}
+
+.label-gift
+{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.img-abrazo{
+  display: block;
+  margin: auto;
+  width: 600px;
+  max-width: 400px;
+  height: auto;
+  text-align: center;
+  border-radius: 12px;
+}
+.container-reservar{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+  padding: 32px 20px 28px 20px;
+}
+.title-assistance{
+  font-family:'Parisienne', cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #000000;
+}
+
+
+
+.title-vestimenta {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}.dc{
+   max-width: 950px;
+   margin: 40px auto;
+   padding: 0 16px 40px;
+   font-family: 'Libre Baskerville', serif;
+   color:#111;
+   text-shadow: 0 0 3px white, 0 0 1px white, 0 0 1px white;
+ }
+
+.dc-title{
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(3rem, 4vw, 2rem);
+  letter-spacing: .2px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: .87;
+  ;
+}
+.dc-stage{
+  position: relative;
+  min-height: 260px; /* alto de la escena de tarjetas */
+
+}
+
+/* Tarjeta negra */
+.dc-card--black{
+  position: relative;
+  background: #d5cec6;
+  height: 220px;
+  width: min(720px, 78%);
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 0;
+}
+
+/* Emboss con imagen (quita .dc-emboss si usas esta) */
+.dc-emboss-img{
+  position:absolute; inset:0;
+  background: left center/50% no-repeat url("/imagenes/iniciales.png");
+  mix-blend-mode: overlay;      /* realza el relieve */
+  opacity: 20%;
+}
+
+/* Franja translúcida inferior */
+.dc-bar{
+
+}
+
+/* Tarjeta blanca superpuesta */
+.dc-card--white{
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #ffffff;
+  min-width: 220px;
+  padding: 20px 12px;
+  transform: translateX(10px);  /* leve despegue */
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  border-radius: 0;
+  padding-top: 40px;
+}
+
+.dc-white{ text-align:left; }
+.dc-white-title{ letter-spacing:.12em; font-weight:600; margin-top: -13px; text-align: center;}
+.dc-link{
+  display:inline-block;
+  margin-top:0;
+  font-style: italic;
+  text-decoration:none;
+  color:#333;
+  text-align: center;
+
+}
+
+/* Bloque de confirmación */
+.dc-rsvp{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;            /* centrada respecto al stage */
+  bottom: -40px;             /* solapamiento bajo la tarjeta negra: ajusta a gusto */
+  max-width: min(720px, 78%);
+  width: 360px;              /* controla tamaño – puedes ajustar */
+  text-align: center;
+  background: rgba(255,255,255,.22);
+  backdrop-filter: blur(2px);
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0;
+  z-index: 1;
+}
+.dc p{ margin: 0; }
+.dc a{ color: inherit; text-decoration: none; }
+.dc .dc-script{ margin-bottom: 8px; }
+
+.dc-script{
+  font-family:'Parisienne', cursive;
+  font-size: clamp(24px, 4vw, 36px);
+  margin: 0 0 6px;
+}
+.dc-confirm{
+  display:inline-block;
+  margin-top:6px;
+  font-style: italic;
+  text-decoration:none;
+  color:#333;
+}
+
+.fotos{
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* mantiene proporción */
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+
+.card {
+  background: #fff;
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+.card .texto-evento  {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  color: #2d2d2d;
+  margin-top: 1rem;
+}
+
+.card .titulo {
+  font-family:'Parisienne', cursive;
+  font-size: clamp(24px, 4vw, 36px);
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.card .texto-evento .direccion {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card .texto-evento .hora {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d2d2d;
+  margin-bottom: 16px;
+}
+
+/* Botón “Ver ubicación” */
+.card .btn-ubicacion {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, box-shadow 0.2s;
+}
+
+.card .btn-ubicacion:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.eventos-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card-reservation{
+  background: #fff;
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+}
+
+.title-first{
+  font-family:'Parisienne', cursive;
+  font-size: clamp(24px, 4vw, 36px);
+  color: #333;
+}
+.second-title{
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(15px, 4vw, 20px);
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.card-gift{
+  background: #fff;
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.carrusel{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 50px 30px;   /* 50px arriba/abajo, 30px izquierda/derecha */
+  margin: 40px 20px 60px; /* top, lados, bottom */
+  margin: 10px 20px 30px 20px; /* top, right, bottom, left */
+}
+
+
+
+/* Carousel images fill the assigned height */
+c-carousel img {
+  width: 100%;
+  object-fit: cover; /* mantiene proporción */
+  display: block;
+}
+.
+/* Carousel sizing (compact) */
+c-carousel {
+  height: 360px;           /* altura compacta de escritorio */
+  max-width: 1000px;        /* ancho máximo opcional */
+  margin: 0 auto;          /* centrado */
+}
+c-carousel-inner,
+c-carousel-item { width: 100%; }
+
+
+/* Suaviza la aparición de los captions */
+
+
+/* Efecto Ken Burns (zoom suave) por slide */
+.kenburns {
+  animation: kenburns-zoom 8s ease-in-out both;
+  transform-origin: center center;
+  will-change: transform;
+}
+c-carousel-inner {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes kenburns-zoom {
+  0%   { transform: scale(1) translate3d(0,0,0); }
+  100% { transform: scale(1.08) translate3d(0,0,0); }
+}
+
+/* Anti-flicker for carousel crossfade */
+c-carousel,
+c-carousel-inner,
+c-carousel-item {
+  background: #000; /* evita destello blanco entre imágenes */
+}
+c-carousel-inner,
+c-carousel-item {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+c-carousel-item img {
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* iOS Safari: reduce parpadeos durante opacidad */
+@supports (-webkit-touch-callout: none) {
+  c-carousel-item,
+  c-carousel-inner {
+    -webkit-transform: translateZ(0);
+  }
+}
+
+@media (max-width: 720px) {
+
+    c-carousel {
+      width: auto;
+    }
+
+    c-carousel-item img {
+      width: auto;
+      object-fit: cover; /* mantiene proporción */
+      display: block;
+    }
+  }
+

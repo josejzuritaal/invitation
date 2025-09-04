@@ -1,0 +1,357 @@
+/* ============================= */
+/*  CUENTA REGRESIVA CON “:”     */
+/* ============================= */
+
+.countdown-image-bg, .countdown-image-bgs {
+  /* hacer la imagen mas grande */
+  padding: 250px 20px;            /* Pequeño acolchado lateral */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  /* Puedes ajustar o eliminar este máximo */
+ /* background-image: url("/imagenes/mano2.jpg");*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 480px; /* Ajusta a tu gusto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-title {
+  font-family:'Parisienne', cursive;
+  font-size: clamp(2rem, 1vw, 1.35rem);
+  text-align: center;
+  margin-bottom:-2rem;
+}
+.countdown-top-text {
+  color: black;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.countdown-bottom-text {
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 16px;
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.countdown-grid {
+  display: grid;
+  /* 7 columnas: num,sep,num,sep,num,sep,num */
+  grid-template-columns: repeat(7, auto);
+  justify-content: center;    /* Centra todo el Grid en su contenedor padre */
+  justify-items: center;      /* Centra cada celda horizontalmente */
+  row-gap: 8px;               /* Espacio vertical entre fila de números y fila de etiquetas */
+  column-gap: 24px;           /* Espacio horizontal entre cada columna de números/separadores */
+  margin: 24px auto;          /* Centrado horizontal y separación vertical */
+}
+
+/* ======= FILA 1: NÚMEROS “.number” ======= */
+
+.countdown-grid .number {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 5rem;      /* Tamaño grande para destacar el conteo */
+  line-height: 1;
+  /* No necesita margen adicional, el gap ya lo separa */
+  color: black;
+}
+
+/* ======= FILA 1: SEPARADORES “.separator” ======= */
+
+.countdown-grid .separator {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: black;
+  -webkit-text-stroke: 1px #ffffff;
+  /* Opcional: si quieres que el “:” quede más cerca del número anterior, reduce el column-gap. */
+}
+
+/* ======= FILA 2: ETIQUETAS “.label” ======= */
+
+.countdown-grid .label {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;      /* Tamaño más pequeño que el número */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #101010;
+  -webkit-text-stroke: 1px #101010;
+}
+
+/* ==== OPCIONAL: estilos para la columna vacía debajo de cada “:” ==== */
+/* La línea “<div></div>” no necesita estilo, ya que su función es ocupar el espacio. */
+
+/* ============================= */
+/*  RESPONSIVE (≤ 430px ancho)   */
+/* ============================= */
+
+/* ============================= */
+/*  TARJETAS DE EVENTOS         */
+/* ============================= */
+
+/* Contenedor padre: dos tarjetas (fila en desktop, columna en móvil) */
+/* OJO: con punto */
+.eventos-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Sello como background */
+.sello {
+  width: 150px;
+  height: 150px;
+  background-image: url("/imagenes/sello.png"); /* ajusta la ruta/extension */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: -70px auto 10px auto; /* arriba | derecha | abajo | izquierda */
+  /* Útiles para depurar: quítalos después */
+  /* outline: 1px dashed red; */
+}
+.iniciales{
+  width: 90px;
+  height: 90px;
+  background-image: url("/imagenes/iniciales.png"); /* ajusta la ruta/extension */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 0px auto 10px auto; /* arriba | derecha | abajo | izquierda */
+  /* Útiles para depurar: quítalos después */
+  /* outline: 1px dashed red; */
+}
+
+.evento-card {
+  background: #fff;
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+/* Ícono en la parte superior */
+.evento-card .icono {
+  margin-bottom: 16px;
+}
+
+.evento-card .icono svg {
+  width: 120px;
+  height: 120px;
+  stroke: #2d2d2d;         /* Color del trazo del SVG */
+}
+
+/* Texto del evento */
+.evento-card .texto-evento {
+  width: 100%;
+}
+
+.evento-card .texto-evento  {
+ font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  color: #2d2d2d;
+  margin-top: -2rem;
+}
+
+.evento-card .titulo {
+  font-family:'Parisienne', cursive;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.evento-card .texto-evento .direccion {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.evento-card .texto-evento .hora {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d2d2d;
+  margin-bottom: 16px;
+}
+
+/* Botón “Ver ubicación” */
+.evento-card .btn-ubicacion {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, box-shadow 0.2s;
+}
+
+.evento-card .btn-ubicacion:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------
+   6) RESPONSIVE: EN MÓVIL (≤ 768px)
+   -------------------------------------------- */
+@media (max-width: 768px) {
+
+  .countdown-grid {
+    column-gap: 12px;    /* Reducimos la distancia entre columnas */
+    row-gap: 4px;        /* Menos espacio vertical */
+    padding: 10px 10px;
+    margin: 16px auto;
+  }
+
+  .countdown-grid .number {
+    font-size: 3rem;
+    color: #101010;
+    -webkit-text-stroke: 1px #101010;
+  }
+
+  .countdown-grid .separator {
+    font-size: 2.2rem;
+    color: #101010;
+    -webkit-text-stroke: 1px #101010;
+  }
+
+  .countdown-grid .label {
+    font-size: 0.85rem;  /* Etiqueta ligeramente reducida */
+    color: #101010;
+    -webkit-text-stroke: 1px #101010;
+  }
+  .countdown-top-text {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .countdown-bottom-text {
+    font-size: 2rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+
+  .eventos-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .evento-card {
+    width: 100%;          /* Ocupar todo el ancho disponible */
+    max-width: 360px;     /* Limitarlo a 360px para que no sea demasiado extenso */
+    padding: 20px 16px;
+  }
+
+  .evento-card .icono {
+    margin-bottom: 12px;
+  }
+
+  .evento-card .tipo {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .evento-card .titulo {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .evento-card .direccion {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .evento-card .hora {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+
+  .evento-card .btn-ubicacion {
+    width: 60%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   1) PARENTS
+   ============================================ */
+.parents-title {
+  font-family:'Libre Baskerville', serif;
+  font-size:clamp(1rem, 2.6vw, 1.35rem);
+  letter-spacing:.3px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #000000;
+  margin-top: 1rem;
+}
+.parents .name {
+  font-family:'Libre Baskerville', serif;
+  text-align: center;
+  font-size:clamp(1rem, 2.2vw, 1.2rem);
+  letter-spacing:.2px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+.parents .text-name {
+  font-family:'Libre Baskerville', serif;
+  font-size:clamp(1rem, 1vw, 1.35rem);
+  letter-spacing:.2px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.img-floral{
+  display: block;
+  margin: auto;
+  width: auto;
+  height: 100px;
+  text-align: center;
+}
+
+.img-abrazo{
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 12px;
+}

@@ -1,0 +1,157 @@
+.timeline-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px 0;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+/* Línea de fondo gris */
+.timeline-line-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #e0e0e0;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Línea de progreso negra */
+.timeline-line-progress {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 0;
+  background: #a88849;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: height 1.2s linear;
+}
+
+
+.timeline-icon{
+  position: relative;
+  width: 130px;
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+.timeline-icon.left {
+  right: -65%;
+  text-align: right;
+}
+.timeline-icon.right {
+  left: -65%;
+  text-align: left;
+}
+
+
+.timeline-icon {
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 85px; /* tamaño del icono */
+  color: #c56c39;  /* color del icono */
+}
+
+
+
+/* Si el item está a la izquierda, el icono va a la derecha (lado vacío) */
+
+/* Los ítems van a la izquierda o derecha */
+
+
+
+.timeline-item{
+  position: relative;
+  width: 50%;
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Estilo del contenido de cada ítem */
+.timeline-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 16px;
+  box-shadow: 0 2px 16px #0002;
+  position: relative;
+  z-index: 3;
+  display: flex;              /* FLEXBOX */
+  flex-direction: column;     /* Los hijos en columna */
+  align-items: center;        /* Centra horizontal */
+  justify-content: center;    /* Centra vertical */
+  min-width: 170px;
+  min-height: 100px;          /* Ajusta a lo que necesites */
+  text-align: center;
+}
+
+.timeline-content .time {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #a88849;
+  margin-bottom: 8px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.timeline-content .desc {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(.8rem, 1vw, 1.35rem);
+  text-align: center;
+  color: #333;
+  padding-top: 0
+}
+
+.titile-timeline3{
+  font-family:'Parisienne', cursive;
+  font-size: clamp(2rem, 1vw, 1.35rem);
+  text-align: center;
+  margin-bottom:-2rem;
+}
+/* Responsive: todo centrado y vertical en móvil */
+@media (max-width: 600px) {
+  .timeline-content {
+    min-width: 110px;
+    padding: 8px 4px;
+  }
+
+  .timeline-container {
+    padding: 25px 0;
+  }
+
+
+  .timeline-icon.left {
+    right: -83%;
+    text-align: right;
+  }
+
+  .timeline-icon.right {
+    left: -83%;
+    text-align: left;
+  }
+
+  .desc {
+    text-transform: uppercase;
+  }
+}
+
+

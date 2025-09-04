@@ -1,0 +1,132 @@
+<div>
+  <section class="dc" revealOnScroll>
+    <p class="dc-title">
+      <span revealOnScroll>DRESS</span><br>
+      <span revealOnScroll>CODE</span>
+    </p>
+
+    <div class="dc-stage">
+      <div class="dc-card dc-card--black" revealOnScroll>
+        <!-- Opción A: monograma como texto en relieve -->
+        <div class="dc-emboss-img" revealOnScroll></div>
+        <!-- Opción B (si tienes imagen): -->
+        <!-- <div class="dc-emboss-img"></div> -->
+        <div class="dc-bar" revealOnScroll></div>
+
+      </div>
+      <div class="dc-rsvp">
+        <p class="dc-script">Por favor, confirma tu asistencia</p>
+        <a
+          class="dc-confirm"
+          href="https://wa.me/529361125433?text=Confirmo%20asistencia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Confirmar
+        </a>
+      </div>
+
+      <div class="dc-card dc-card--white" revealOnScroll>
+        <div class="dc-white" revealOnScroll>
+          <div class="dc-white-title" revealOnScroll>ETIQUETA</div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+</div>
+<div class="card-reservation">
+  <p class="title-first">Hemos reservado 1 </p>
+  <p class="second-title mayusculas">
+  lugar en tu honor
+</p>
+</div>
+
+<div>
+  <p class="subttitle-nochild">ADORAMOS A TUS HIJOS, PERO CREEMOS QUE NECESITAN UNA NOCHE LIBRE. SÓLO ADULTOS, POR FAVOR</p>
+</div>
+<div>
+  <img class="fotos" src="imagenes/foto1.jpg">
+</div>
+
+<div class="container my-5">
+  <div class="card ">
+      <div class="titulo text-center mb-3">
+        <p>Sugerencia de hospedaje</p>
+      </div>
+      <div class="texto-evento mayusculas text-center mb-4">
+        <p class="">Para su comodidad, sugerimos dos opciones cercanas al lugar de la celebración</p>
+      </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6 text-center texto-evento mayusculas mb-3 mb-md-0">
+          <p class="mb-2">Hotel City Express Junior</p>
+          <a
+            class="btn btn-outline-dark btn-ubicacion"
+            href="https://maps.app.goo.gl/UMzZmvCam8FGZxqNA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Ver Ubicación</a>
+        </div>
+        <div class="col-md-6 col-sm-6 text-center texto-evento mayusculas">
+          <p class="mb-2">Hotel Báez Carrizal</p>
+          <a
+            class="btn btn-outline-dark btn-ubicacion"
+            href="https://maps.app.goo.gl/BR7SZNm1tafG4VN6A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Ver Ubicación</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class="card-gift">
+<h2 class="title-gifts " revealOnScroll>
+   Mesa de Regalos
+</h2>
+<div class="gift">
+  <p class="title-gift mayusculas" revealOnScroll>
+    Tu presencia es nuestro mayor regalo
+    Acompáñanos también a construir recuerdos en nuestra luna de miel con tu aporte
+    ¡Gracias!
+  </p>
+  <H3 CLASS="subttitle-gift">BBVA</H3>
+  <p class="subttitle-gift mayusculas">Maria Fernanda Zurita Alvarez
+  </p>
+  <h3 class="subttitle-gift mayusculas">Número de tarjeta</h3>
+  <p class="subttitle-gift mayusculas"> 4152 3141 6282 3143
+  </p>
+  <h3 class="subttitle-gift mayusculas">Concepto</h3>
+  <p class="subttitle-gift mayusculas"> nombre completo
+  </p>
+</div>
+</div>
+
+
+<div style="overflow-anchor: none;" class="carrusel">
+<c-carousel transition="crossfade" [interval]="5000" [wrap]="true">
+  <c-carousel-indicators />
+  <c-carousel-inner>
+    @for (slide of slides; track slide.src) {
+      <c-carousel-item>
+        <img
+          alt="{{slide.title}}"
+          class="d-block w-100 kenburns"
+          loading="lazy"
+          src="{{slide.src}}"
+          style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;"
+        />
+
+      </c-carousel-item>
+    }
+  </c-carousel-inner>
+  <c-carousel-control type="button" caption="Previous" direction="prev" />
+  <c-carousel-control type="button" caption="Next" direction="next" />
+</c-carousel>
+</div>

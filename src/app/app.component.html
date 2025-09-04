@@ -1,0 +1,15 @@
+<!-- src/app/app.component.html -->
+<!-- Solo muestra la portada (sobre) si aún NO está abierto -->
+<app-invitacion *ngIf="!sobreAbierto" (abrir)="manejarAbrir()"></app-invitacion>
+
+<audio #bgMusic src="music/intro.mp"></audio>
+<!-- Cuando se abre el sobre, muestra TODO el resto de la invitación -->
+<ng-container *ngIf="sobreAbierto">
+<div class="fondo">
+  <app-portada></app-portada>
+  <app-countdown></app-countdown>
+  <app-timeline></app-timeline>
+  <app-vestimenta></app-vestimenta>
+</div>
+  <!-- ...agrega aquí los demás componentes que quieras mostrar... -->
+</ng-container>
