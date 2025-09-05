@@ -13,10 +13,24 @@
   align-items: center;
   z-index: 9999;              /* Siempre por encima del contenido */
   cursor: pointer;            /* Indica que todo es clicable */
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  transition: opacity 15s ease, visibility 15s ease;
   opacity: 1;
   visibility: visible;
 }
+
+  .sello {
+    width: 150px;
+    height: 150px;
+    background-image: url("/imagenes/portada/sello.png"); /* ajusta la ruta/extension */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin-top: -340px;
+    margin-left: 20px; /* arriba | derecha | abajo | izquierda */
+    /* Útiles para depurar: quítalos después */
+    /* outline: 1px dashed red; */
+    position: absolute
+    }
 /* Cuando Angular le añade la clase “hidden”,
    bajamos opacidad y ocultamos con visibility: hidden */
 .envelope-container.hidden {
@@ -30,9 +44,10 @@
   top: 0;
   left: 50%;              /* Mueve la esquina superior izquierda al centro */
   transform: translateX(-50%);
-  height: 100vh;          /* Ocupa toda la altura de la ventana */
-  width: auto;            /* Mantiene la proporción original */
-  object-fit: cover;      /* Si la imagen es más ancha/alta que el contenedor, recorta uniformemente */
+  height: auto;          /* Ocupa toda la altura de la ventana */
+  width: 50vh;            /* Mantiene la proporción original */
+  object-fit: cover;
+  padding-top: 30%;
 }
 
 
@@ -282,331 +297,4 @@
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-}
-/* ============================= */
-/*  CUENTA REGRESIVA CON “:”     */
-/* ============================= */
-
-.countdown-grid {
-  display: grid;
-  /* 7 columnas: num,sep,num,sep,num,sep,num */
-  grid-template-columns: repeat(7, auto);
-  justify-content: center;    /* Centra todo el Grid en su contenedor padre */
-  justify-items: center;      /* Centra cada celda horizontalmente */
-  row-gap: 8px;               /* Espacio vertical entre fila de números y fila de etiquetas */
-  column-gap: 24px;           /* Espacio horizontal entre cada columna de números/separadores */
-  margin: 24px auto;          /* Centrado horizontal y separación vertical */
-
-  /* hacer la imagen mas grande */
-  padding: 250px 20px;            /* Pequeño acolchado lateral */
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 800px;
-
-  /* Puedes ajustar o eliminar este máximo */
-  background-image: url("/imagenes/reloj.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-
-
-/* ======= FILA 1: NÚMEROS “.number” ======= */
-
-.countdown-grid .number {
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;      /* Tamaño grande para destacar el conteo */
-  line-height: 1;
-  /* No necesita margen adicional, el gap ya lo separa */
-  color: white;
-  -webkit-text-stroke: 1px #ffffff;
-}
-
-
-/* ======= FILA 1: SEPARADORES “.separator” ======= */
-
-.countdown-grid .separator {
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  line-height: 1;
-  color: white;
-  -webkit-text-stroke: 1px #ffffff;
-  /* Opcional: si quieres que el “:” quede más cerca del número anterior, reduce el column-gap. */
-}
-
-/* ======= FILA 2: ETIQUETAS “.label” ======= */
-
-.countdown-grid .label {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;      /* Tamaño más pequeño que el número */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: white;
-  -webkit-text-stroke: 1px #ffffff;
-}
-
-/* ==== OPCIONAL: estilos para la columna vacía debajo de cada “:” ==== */
-/* La línea “<div></div>” no necesita estilo, ya que su función es ocupar el espacio. */
-
-/* ============================= */
-/*  RESPONSIVE (≤ 430px ancho)   */
-/* ============================= */
-
-@media (max-width: 430px) {
-  .countdown-grid {
-    column-gap: 12px;    /* Reducimos la distancia entre columnas */
-    row-gap: 4px;        /* Menos espacio vertical */
-    padding: 180px 10px;
-    margin: 16px auto;
-  }
-
-  .countdown-grid .number {
-    font-size: 2.2rem;
-    color: white;
-    -webkit-text-stroke: 1px #ffffff;/* Número un poco más pequeño para caber */
-  }
-
-  .countdown-grid .separator {
-    font-size: 2.2rem;
-    color: white;
-    -webkit-text-stroke: 1px #ffffff;/* Mantiene proporción con el número */
-  }
-
-  .countdown-grid .label {
-    font-size: 0.85rem;  /* Etiqueta ligeramente reducida */
-    color: white;
-    -webkit-text-stroke: 1px #ffffff;
-  }
-}
-
-/* ============================= */
-/*  TARJETAS DE EVENTOS         */
-/* ============================= */
-
-/* Contenedor padre: dos tarjetas (fila en desktop, columna en móvil) */
-.eventos-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;               /* Espacio entre tarjetas en desktop */
-  width: 100%;
-  max-width: 1000px;
-  margin: 40px auto;       /* Centrado horizontal y separación vertical */
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-/* Cada tarjeta de evento */
-.evento-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 360px;        /* Restricción de ancho en desktop */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 24px 16px;      /* Espacio interior */
-  box-sizing: border-box;
-  text-align: center;
-}
-
-/* Ícono en la parte superior */
-.evento-card .icono {
-  margin-bottom: 16px;
-}
-
-.evento-card .icono svg {
-  width: 120px;
-  height: 120px;
-  stroke: #2d2d2d;         /* Color del trazo del SVG */
-}
-
-/* Texto del evento */
-.evento-card .texto-evento {
-  width: 100%;
-}
-
-.evento-card .texto-evento .tipo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.5rem;
-  color: #2d2d2d;
-  margin-bottom: 4px;
-}
-
-.evento-card .texto-evento .titulo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.evento-card .texto-evento .direccion {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-
-.evento-card .texto-evento .hora {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #2d2d2d;
-  margin-bottom: 16px;
-}
-
-/* Botón “Ver ubicación” */
-.evento-card .btn-ubicacion {
-  display: inline-block;
-  padding: 10px 24px;
-  background-color: #f0f0f0;
-  color: #333;
-  font-family: 'Playfair Display', serif;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border: none;
-  border-radius: 6px;
-  transition: background-color 0.3s, box-shadow 0.2s;
-}
-
-.evento-card .btn-ubicacion:hover {
-  background-color: #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-/* --------------------------------------------
-   6) RESPONSIVE: EN MÓVIL (≤ 768px)
-   -------------------------------------------- */
-@media (max-width: 768px) {
-  .eventos-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin-top: 24px;
-  }
-
-  .evento-card {
-    width: 100%;          /* Ocupar todo el ancho disponible */
-    max-width: 360px;     /* Limitarlo a 360px para que no sea demasiado extenso */
-    padding: 20px 16px;
-  }
-
-  .evento-card .icono {
-    margin-bottom: 12px;
-  }
-
-  .evento-card .tipo {
-    font-size: 1.15rem;
-    margin-bottom: 6px;
-  }
-
-  .evento-card .titulo {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-  }
-
-  .evento-card .direccion {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-  }
-
-  .evento-card .hora {
-    font-size: 1.05rem;
-    margin-bottom: 14px;
-  }
-
-  .evento-card .btn-ubicacion {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1rem;
-  }
-}
-
-
-/* --------------------------------------
-8) ANIMACIÓN DE “REVEAL ON SCROLL”
-   ----------------------------------- */
-
-/* Estado inicial: oculto y desplazado hacia abajo */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 1.5s ease-out,
-    transform 1.5s ease-out;
-  /* Asegúrate de que las cajas no colapsen mientras están ocultas */
-  will-change: opacity, transform;
-}
-
-/* Cuando añadamos .show, pasa a opacidad 1 y posición original */
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* ============================================
-   1) PARENTS
-   ============================================ */
-.parents-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #333;
-}
-.parents .name {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.parents .text-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 8px;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.img-floral{
-  display: block;
-  margin: auto;
-  width: auto;
-  height: 100px;
-  text-align: center;
-}
-
-audio#bgMusic {
-  display: none;
-}
-
-/* VESTIMENTA */
-.vestimenta .title-vestimenta {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  text-align: center;
-  color: #333;
-}
-
-
-.vestimenta .img-vestimenta {
-  display: block;
-  margin: auto;
-  width: auto;
-  height: 190px;
-}
-
-
-
-
+}}
