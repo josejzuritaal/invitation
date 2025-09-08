@@ -77,7 +77,7 @@
 
 .subtitulo-boda {
   font-family: 'Pinyon Script', cursive;
-  font-size: 4rem;
+  font-size: 3.7rem;
   color:#b08d57;
 }
 
@@ -105,7 +105,7 @@
 .text-invitacion-reserver {
   font-family: 'Libre Baskerville', serif;
   font-size: clamp(1rem, 2vw, 1.35rem);
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
   color: #000000;
   line-height: 0;
   text-align: center;
