@@ -2,7 +2,7 @@
 <!-- Solo muestra la portada (sobre) si aún NO está abierto -->
 <app-invitacion *ngIf="!sobreAbierto" (abrir)="manejarAbrir()"></app-invitacion>
 
-<audio #bgMusic src="music/intro.mp"></audio>
+<audio #bgMusic src="music/intro.mp3"></audio>
 <!-- Cuando se abre el sobre, muestra TODO el resto de la invitación -->
 <ng-container *ngIf="sobreAbierto">
 <div class="fondo">

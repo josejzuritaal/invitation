@@ -1,21 +1,39 @@
-<!-- ==============================================
-     1) SOBRE CERRADO: usa la imagen icono-sobre.png
-   ============================================== -->
 <div
-  class="envelope-container"
+  class="container-fluid min-vh-100 d-flex justify-content-center align-items-center w-100 fondo-portada"
   (click)="openEnvelope()"
   [class.hidden]="opened"
   aria-label="Abrir invitación"
+
 >
-  <!-- La imagen del sobre ocupa TODO el viewport -->
-  <img
-    src="imagenes/portada/sobre-cerrado.png"
-    alt="Sobre cerrado"
-    class="envelope-img"
-  />
+  <div class="row justify-content-center w-100">
+    <div class="col-12  position-relative">
+      <!-- TEXTO ENCIMA DEL SOBRE -->
+      <div class="text-center texto-sobre">
+        <p class="boda-primaria">Fernanda &amp; Rogelio</p>
+        <div class="text-invitacion mayusculas">
+       <p> Nos complace invitarte a </p>
+       <p>Nuestra Boda</p>
+        </div>
+        </div>
+
+
+
+    </div>
+
+    <div
+      (click)="openEnvelope()"
+      [class.hidden]="opened"
+      aria-label="Abrir invitación"
+
+    >
+        <img
+          src="/imagenes/portada/sobre-cerrado.png"
+          alt="Sobre cerrado"
+          class="img-fluid sobre"
+          style="max-width:700px; width:100%; height:auto;"
+        />
+      </div>
 
 </div>
 
-
-
-
+</div>

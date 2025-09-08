@@ -11,5 +11,20 @@ import {RevealOnScrollDirective} from '../shared/reveal-on-scroll.directive';
 })
 export class PortadaComponent {
 
+  isPlaying = false;
+
+  toggleMusic() {
+    const audio = document.getElementById('musica') as HTMLAudioElement;
+    if (!audio) return;
+
+    if (audio.paused) {
+      audio.play();
+      this.isPlaying = true;
+    } else {
+      audio.pause();
+      this.isPlaying = false;
+    }
+  }
+
 
 }

@@ -1,4 +1,3 @@
-/* Imagen de fondo */
 .imagen-container {
   position: relative;
   height: 80vh;
@@ -6,18 +5,31 @@
   overflow: hidden;
   margin: 10px;
 }
-
 .imagen {
   position: absolute;
   inset: 0;
-  background-image: url('/imagenes/portada/sobre-abierto.png');
+  background-image: url('../../assets/imagenes/portada/sobre-abierto.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
 }
 
-/* Difuminado inferior */
+
+.play{
+  position: absolute;
+  top: calc(100% - -20px); /* ajusta para que quede justo debajo de la tarjeta */
+  left: 50%;
+  transform: translateX(-50%); /* centrado horizontal */
+  width: 200px;
+  height: 100px;
+  background: url('../../assets/imagenes/play.png') center/contain no-repeat;
+  z-index: 20;
+  cursor: pointer;
+}
+.play.playing {
+  background-image: url('../../assets/imagenes/stop.png'); /* ícono pausa */
+}
 
 /* --- Posiciona el bloque sobre la foto SIN que se baje --- */
 .parte1{
@@ -50,7 +62,6 @@
   text-shadow: 0 0 3px white, 0 0 1px white, 0 0 1px white;
 }
 
-
 /* Tamaños base */
 .parte1 .intro{
   font-family:'Libre Baskerville', serif;
@@ -60,17 +71,17 @@
   text-shadow: 0 0 3px white, 0 0 1px white, 0 0 1px white;
 }
 .nombres-novios h1{
-  font-family:'Parisienne', cursive;
-  margin:0; line-height:1;
+  font-family: 'Parisienne', cursive;
+  font-size:clamp(67px,9vw,100px);
+  color: #1f2023;
+  margin:0;
+  line-height:.75;
   font-weight:600;
-  font-size:clamp(2.6rem, 8vw, 6.2rem);
   padding-bottom: 1rem;
-  text-shadow: 0 0 3px white, 0 0 1px white, 0 0 1px white;
   padding-top: 13px;
 }
 .versiculo h2, .versiculo h3{
   text-align: center;
-  font-family:'Parisienne', cursive;
   font-weight:400; margin:.75rem 0 0;
   font-size:clamp(1rem, 3.4vw, 1.4rem);
 }
@@ -99,23 +110,34 @@
   text-align: center;
   margin-top: -200px;
   margin-left: 10px;
-
+  border: 1.3px solid #a88849; /* dorado */
 
   /* Fondo adorno */
 
 }
 
-
 /* nomrbres papas*/
 .text-name {
   font-family: 'Libre Baskerville', serif;
-  font-size: clamp(.8rem, 1vw, 1.35rem);
+  font-size: clamp(.7rem, 2vw, 1.35rem);
   letter-spacing: .2px;
   color: #000000;
   margin-bottom: 8px;
   line-height: 1.4;
   text-align: center;
   text-decoration:none;
+}
+
+.text-name-villahermosa{
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(.7rem, 2vw, 1.35rem);
+  letter-spacing: .2px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1;
+  text-align: center;
+  text-decoration:none;
+  margin-top: -0px;
 }
 
 .parents-title {
@@ -144,7 +166,7 @@
 .sello {
   width: 150px;
   height: 150px;
-  background-image: url("/imagenes/portada/sello.png"); /* ajusta la ruta/extension */
+  background-image: url("../../assets/imagenes/portada/sello.png"); /* ajusta la ruta/extension */
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -153,33 +175,69 @@
   /* Útiles para depurar: quítalos después */
   /* outline: 1px dashed red; */
 }
-/* --- Ajustes específicos para CEL --- */
+.nombres-boda-1 h1 {
+  font-family: 'Pinyon Script', cursive;
+  font-size: clamp(3.5rem, 48vw, 1.3rem);
+  color: #1f2023;
+  letter-spacing: 2px; /* dorado */
+  margin: 0;
+  line-height: 80px;
+}
+.nombres-boda-1 h1:nth-child(2){
+  margin-top: -30px;
+}
+.nombres-boda-1 h1:nth-child(3){
+  margin-bottom: 23px;
+}
+.titulo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600; /* semi bold */
+  font-size: 25px;
+  letter-spacing: 2px; /* espaciado elegante */
+}
+.cursiva {
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+.nombres {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.detalle h1{
+  font-family: 'Great Vibes', cursive;
+  font-size:clamp(4rem, 48vw, 1.3rem);
+}
+
+.text-name-parent{
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(.5rem, 2vw, .8rem);
+  letter-spacing: .2px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1;
+  text-align: center;
+  text-decoration:none;
+}
+
 @media (max-width:760px){
   .imagen-container{
     width: 90%;
     margin-top: -32px;/* ancho relativo al móvil */
-    max-width: 420px;    /* límite opcional */
+    max-width: 600px;    /* límite opcional */
     min-height: 100px;
     margin-left: 0;      /* lo pega a la izquierda */
     margin-right: auto;  /* empuja hacia la izquierda */
     display: block;
     height: 70vh;
   }
-
-  .parte1{
-    bottom:65%;               /* lo subimos un poco para que el lugar no salga del difuminado */
-    padding:0 1.25rem;
-  }
-  .imagen{
-  width: 95%;}
-  /* NOMBRES más grandes en móvil (lo que marcaste en rojo) */
-  .nombres-novios h1{
-    font-size:clamp(2rem, 12vw, 7rem);
-  }
-
-  /* El lugar (verde) queda arriba del borde blanco y con menos espacio */
-  .parte1 .intro{
-    margin:.3rem 0 .4rem;
-    font-size:clamp(1.3rem, 48vw, 1.3rem);
-    text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white;
-  }}
+}

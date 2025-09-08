@@ -87,6 +87,14 @@
   color: #222;
   text-align: center;
 }
+.subttitle-gift-name
+{
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
+  font-size: 1.4rem;
+  color: #222;
+  text-align: center;
+}
 
 .label-gift
 {
@@ -103,7 +111,8 @@
   max-width: 400px;
   height: auto;
   text-align: center;
-  border-radius: 12px;
+  border: 1px solid #a88849;
+
 }
 .container-reservar{
   background: #fff;
@@ -153,7 +162,7 @@
 /* Tarjeta negra */
 .dc-card--black{
   position: relative;
-  background: #d5cec6;
+  background: #4d582a;
   height: 220px;
   width: min(720px, 78%);
   overflow: hidden;
@@ -165,7 +174,7 @@
 /* Emboss con imagen (quita .dc-emboss si usas esta) */
 .dc-emboss-img{
   position:absolute; inset:0;
-  background: left center/50% no-repeat url("/imagenes/iniciales.png");
+  background: left center/50% no-repeat url("../../assets/imagenes/iniciales.png");
   mix-blend-mode: overlay;      /* realza el relieve */
   opacity: 20%;
 }
@@ -188,6 +197,8 @@
   z-index: 2;
   border-radius: 0;
   padding-top: 40px;
+  border: 1px solid #a88849;
+
 }
 
 .dc-white{ text-align:left; }
@@ -228,6 +239,13 @@
   font-size: clamp(24px, 4vw, 36px);
   margin: 0 0 6px;
 }
+
+.cursiva-1-confirmar{
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
 .dc-confirm{
   display:inline-block;
   margin-top:6px;
@@ -241,15 +259,17 @@
   width: 100%;
   object-fit: cover; /* mantiene proporción */
   display: block;
+  border: 1.3px solid #a88849;
+}
+.imagen-foto{
   padding-left: 20px;
   padding-right: 20px;
-
 }
 
 
 .card {
   background: #fff;
-  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 360px;
   display: flex;
@@ -259,6 +279,8 @@
   box-sizing: border-box;
   text-align: center;
   margin: auto;
+  border-radius: 0;
+  border: 1.3px solid #a88849;
 }
 
 
@@ -365,6 +387,7 @@
   text-align: center;
   margin: auto;
   margin-bottom: 10px;
+  border: 1.3px solid #a88849;
 }
 
 .carrusel{

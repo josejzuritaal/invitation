@@ -1,11 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RevealOnScrollDirective} from '../shared/reveal-on-scroll.directive';
+import {
+    CarouselComponent,
+    CarouselControlComponent,
+    CarouselIndicatorsComponent,
+    CarouselInnerComponent, CarouselItemComponent
+} from "@coreui/angular";
 
 @Component({
   selector: 'app-countdown',
   standalone: true,
-  imports: [CommonModule, RevealOnScrollDirective],
+    imports: [CommonModule, RevealOnScrollDirective, CarouselComponent, CarouselControlComponent, CarouselIndicatorsComponent, CarouselInnerComponent, CarouselItemComponent],
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.css']
 })
@@ -28,6 +34,22 @@ export class CountdownComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // Iniciamos la cuenta regresiva tan pronto se cargue el componente
     this.iniciarCuentaRegresiva();
+
+    this.slides[0] = {
+      id: 0,
+      src: 'imagenes/carrusel/5.jpg',
+
+    };
+    this.slides[1] = {
+      id: 1,
+      src: 'imagenes/carrusel/3.jpg',
+
+    };
+    this.slides[2] = {
+      id: 2,
+      src: 'imagenes/carrusel/4.jpg',
+
+    };
   }
 
   ngOnDestroy(): void {
@@ -79,4 +101,9 @@ export class CountdownComponent implements OnInit, OnDestroy {
   private formatearNumero(valor: number, digitos: number): string {
     return valor.toString().padStart(digitos, '0');
   }
+
+
+  slides: any[] = new Array(3).fill({ id: -1, src: ''
+  });
+
 }

@@ -13,22 +13,106 @@
   text-transform: uppercase;
 }
 
+
+
+
+
 .fondo {
-linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
-url('assets/fondo-textura.jpg');
-  background-image: url('/imagenes/fondo.png'); /* ruta relativa o absoluta */
-  /* 2) Repite la textura, NO cover */
+  background-image: url('assets/imagenes/fondo4.jpg');
   background-repeat: repeat;
 
-  /* 3) Tamaño de la “baldosa” de la textura: responsivo */
-  background-size: auto, clamp(140px, 18vw, 260px);
+  /* Ajusta el tamaño de la baldosa */
+  background-size: clamp(140px, 30vw, 260px) auto;
 
-  /* 4) Posición y ajuste */
   background-position: top center;
-
-  /* 5) Que no se reinicie por sección (si el contenedor es alto) */
   min-height: 100vh;
 }
+
+
+.carrusel{
+  margin: 50px 30px;   /* 50px arriba/abajo, 30px izquierda/derecha */
+  margin: 40px 20px 60px; /* top, lados, bottom */
+  margin: 10px 20px 30px 20px; /* top, right, bottom, left */
+  border: 1.4px solid #a88849; /* dorado */
+}
+
+.cursiva-1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.text-invitacion {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.2rem, 2vw, 1.35rem);
+  letter-spacing: .2px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration:none;
+}
+
+
+/* Carousel images fill the assigned height */
+c-carousel img {
+  width: 100%;
+  object-fit: cover; /* mantiene proporción */
+  display: block;
+}
+.
+  /* Carousel sizing (compact) */
+c-carousel {
+  height: 360px;           /* altura compacta de escritorio */
+  max-width: 1000px;        /* ancho máximo opcional */
+  margin: 0 auto;          /* centrado */
+}
+c-carousel-inner,
+c-carousel-item { width: 100%; }
+
+
+/* Suaviza la aparición de los captions */
+
+
+/* Efecto Ken Burns (zoom suave) por slide */
+.kenburns {
+  animation: kenburns-zoom 8s ease-in-out both;
+  transform-origin: center center;
+  will-change: transform;
+}
+c-carousel-inner {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes kenburns-zoom {
+  0%   { transform: scale(1) translate3d(0,0,0); }
+  100% { transform: scale(1.08) translate3d(0,0,0); }
+}
+
+/* Anti-flicker for carousel crossfade */
+c-carousel,
+c-carousel-inner,
+c-carousel-item {
+  background: #000; /* evita destello blanco entre imágenes */
+}
+c-carousel-inner,
+c-carousel-item {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+c-carousel-item img {
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

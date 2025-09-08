@@ -15,7 +15,7 @@
 
       </div>
       <div class="dc-rsvp">
-        <p class="dc-script">Por favor, confirma tu asistencia</p>
+        <p class="cursiva-1-confirmar">Por favor, confirma tu asistencia</p>
         <a
           class="dc-confirm"
           href="https://wa.me/529361125433?text=Confirmo%20asistencia"
@@ -28,7 +28,7 @@
 
       <div class="dc-card dc-card--white" revealOnScroll>
         <div class="dc-white" revealOnScroll>
-          <div class="dc-white-title" revealOnScroll>ETIQUETA</div>
+          <div class="text-invitacion" revealOnScroll>ETIQUETA</div>
         </div>
       </div>
 
@@ -38,23 +38,23 @@
   </section>
 
 </div>
-<div class="card-reservation">
+<!--div class="card-reservation">
   <p class="title-first">Hemos reservado 1 </p>
   <p class="second-title mayusculas">
   lugar en tu honor
 </p>
-</div>
+</div-->
 
 <div>
   <p class="subttitle-nochild">ADORAMOS A TUS HIJOS, PERO CREEMOS QUE NECESITAN UNA NOCHE LIBRE. SÓLO ADULTOS, POR FAVOR</p>
 </div>
-<div>
+<div class="imagen-foto">
   <img class="fotos" src="imagenes/foto1.jpg">
 </div>
 
 <div class="container my-5">
   <div class="card ">
-      <div class="titulo text-center mb-3">
+      <div class="cursiva-1 text-center ">
         <p>Sugerencia de hospedaje</p>
       </div>
       <div class="texto-evento mayusculas text-center mb-4">
@@ -62,7 +62,7 @@
       </div>
 
     <div class="row">
-        <div class="col-md-6 col-sm-6 text-center texto-evento mayusculas mb-3 mb-md-0">
+        <div class="col-6 text-center texto-evento mayusculas mb-3 mb-md-0">
           <p class="mb-2">Hotel City Express Junior</p>
           <a
             class="btn btn-outline-dark btn-ubicacion"
@@ -71,7 +71,7 @@
             rel="noopener noreferrer"
           >Ver Ubicación</a>
         </div>
-        <div class="col-md-6 col-sm-6 text-center texto-evento mayusculas">
+        <div class="col-6 text-center texto-evento mayusculas">
           <p class="mb-2">Hotel Báez Carrizal</p>
           <a
             class="btn btn-outline-dark btn-ubicacion"
@@ -87,46 +87,30 @@
 
 
 <div class="card-gift">
-<h2 class="title-gifts " revealOnScroll>
+<h2 class="cursiva-1 " revealOnScroll>
    Mesa de Regalos
 </h2>
+  <br>
 <div class="gift">
   <p class="title-gift mayusculas" revealOnScroll>
     Tu presencia es nuestro mayor regalo
-    Acompáñanos también a construir recuerdos en nuestra luna de miel con tu aporte
+    Acompáñanos también a contribuir recuerdos en nuestra luna de miel con tu aporte
     ¡Gracias!
   </p>
-  <H3 CLASS="subttitle-gift">BBVA</H3>
+  <H3 CLASS="subttitle-gift-name">Bbva</H3>
   <p class="subttitle-gift mayusculas">Maria Fernanda Zurita Alvarez
   </p>
-  <h3 class="subttitle-gift mayusculas">Número de tarjeta</h3>
+  <h3 class="subttitle-gift-name ">Número de tarjeta</h3>
   <p class="subttitle-gift mayusculas"> 4152 3141 6282 3143
   </p>
-  <h3 class="subttitle-gift mayusculas">Concepto</h3>
+  <h3 class="subttitle-gift-name">Concepto</h3>
   <p class="subttitle-gift mayusculas"> nombre completo
   </p>
 </div>
 </div>
-
-
-<div style="overflow-anchor: none;" class="carrusel">
-<c-carousel transition="crossfade" [interval]="5000" [wrap]="true">
-  <c-carousel-indicators />
-  <c-carousel-inner>
-    @for (slide of slides; track slide.src) {
-      <c-carousel-item>
-        <img
-          alt="{{slide.title}}"
-          class="d-block w-100 kenburns"
-          loading="lazy"
-          src="{{slide.src}}"
-          style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;"
-        />
-
-      </c-carousel-item>
-    }
-  </c-carousel-inner>
-  <c-carousel-control type="button" caption="Previous" direction="prev" />
-  <c-carousel-control type="button" caption="Next" direction="next" />
-</c-carousel>
+<div>
+  <img src="imagenes/principal.jpg" class="img-abrazo">
 </div>
+<br>
+
+

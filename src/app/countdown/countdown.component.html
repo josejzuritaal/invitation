@@ -13,13 +13,15 @@
 
     <!-- TARJETA 1: CEREMONIA RELIGIOSA -->
     <div class="evento-card " revealOnScroll>
-      <div class="sello"></div>
       <div class="iniciales"></div>
-      <div class="titulo" revealOnScroll>
+      <i class="bi bi-geo-alt-fill"></i>
+      <div class="cursiva-1" revealOnScroll>
         <p>Ceremonia Religiosa y Recepción</p>
       </div>
       <div class="texto-evento mayusculas">
-      <p>Quinta Ceiba Real</p></div>
+      <p>Quinta Ceiba Real</p>
+      </div>
+
       <a
         class="btn-ubicacion"
         href="https://maps.app.goo.gl/X3bexKqzQei5xrha8"
@@ -30,7 +32,7 @@
     </div>
   </div>
 </div>
-  <div class="countdown-title">
+  <div class="cursiva-1">
     <p>Faltan</p>
   </div>
   <div class="countdown-grid" revealOnScroll >
@@ -54,4 +56,26 @@
     <div class="label">SEGUNDOS</div>
   </div>
 
+<br>
+  <div style="overflow-anchor: none;" class="carrusel">
+    <c-carousel transition="crossfade" [interval]="5000" [wrap]="true">
+      <c-carousel-indicators />
+      <c-carousel-inner>
+        @for (slide of slides; track slide.src) {
+          <c-carousel-item>
+            <img
+              alt="{{slide.title}}"
+              class="d-block w-100 kenburns"
+              loading="lazy"
+              src="{{slide.src}}"
+              style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;"
+            />
+
+          </c-carousel-item>
+        }
+      </c-carousel-inner>
+      <c-carousel-control type="button" caption="Previous" direction="prev" />
+      <c-carousel-control type="button" caption="Next" direction="next" />
+    </c-carousel>
+  </div>
 

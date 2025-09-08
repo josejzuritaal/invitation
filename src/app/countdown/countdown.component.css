@@ -105,6 +105,34 @@
 
 /* Contenedor padre: dos tarjetas (fila en desktop, columna en móvil) */
 /* OJO: con punto */
+
+
+/* Sello como background */
+.sello {
+  width: 150px;
+  height: 150px;
+  background-image: url("../../assets/imagenes/sello.png"); /* ajusta la ruta/extension */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: -70px auto 10px auto; /* arriba | derecha | abajo | izquierda */
+  /* Útiles para depurar: quítalos después */
+  /* outline: 1px dashed red; */
+}
+.iniciales{
+  width: 90px;
+  height: 90px;
+  background-image: url("../../assets/imagenes/iniciales.png"); /* ajusta la ruta/extension */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  margin: 30px auto 10px auto; /* arriba | derecha | abajo | izquierda */
+  /* Útiles para depurar: quítalos después */
+  /* outline: 1px dashed red; */
+}
+
 .eventos-flex {
   display: flex;
   flex-direction: row;
@@ -117,45 +145,39 @@
   padding: 0 20px;
   box-sizing: border-box;
 }
-
-/* Sello como background */
-.sello {
-  width: 150px;
-  height: 150px;
-  background-image: url("/imagenes/sello.png"); /* ajusta la ruta/extension */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  margin: -70px auto 10px auto; /* arriba | derecha | abajo | izquierda */
-  /* Útiles para depurar: quítalos después */
-  /* outline: 1px dashed red; */
-}
-.iniciales{
-  width: 90px;
-  height: 90px;
-  background-image: url("/imagenes/iniciales.png"); /* ajusta la ruta/extension */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  margin: 0px auto 10px auto; /* arriba | derecha | abajo | izquierda */
-  /* Útiles para depurar: quítalos después */
-  /* outline: 1px dashed red; */
-}
-
 .evento-card {
   background: #fff;
-  box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 360px;
+  border: 1px solid #a88849; /* dorado */
+  width: 270px;     /* un poquito más ancho */
+  height: 480px;    /* menos alto */
+  border-radius: 50% / 50%;  /* más suavizado */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 24px 16px;
   box-sizing: border-box;
   text-align: center;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: visible;
+  /* 🔑 aumenta el rango del ornamento */
+  --orn-w: clamp(320px, 24vw, 150px);
+  --orn-h: calc(var(--orn-w) * .5);
 }
+
+.evento-card::before,
+.evento-card::after{
+  content:"";
+  position:absolute; left:50%; transform:translateX(-50%);
+  width: var(--orn-w); height: var(--orn-h);
+  background-repeat:no-repeat; background-position:center; background-size: contain;
+  pointer-events:none; z-index:2;
+}
+
+.evento-card::after{  bottom: calc(-1 * var(--orn-h) + 150px);
+  background-image: url('../../assets/imagenes/ornamento.png'); }
+
+
 /* Ícono en la parte superior */
 .evento-card .icono {
   margin-bottom: 16px;
@@ -179,11 +201,21 @@
   margin-top: -2rem;
 }
 
-.evento-card .titulo {
-  font-family:'Parisienne', cursive;
-  font-size: 1rem;
+.evento-card .cursiva-1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;
+  font-weight: 400;
   color: #333;
+  line-height: 3;
   margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.cursiva-1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .evento-card .texto-evento .direccion {
@@ -263,18 +295,8 @@
   }
 
 
-  .eventos-flex {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin-top: 24px;
-  }
 
-  .evento-card {
-    width: 100%;          /* Ocupar todo el ancho disponible */
-    max-width: 360px;     /* Limitarlo a 360px para que no sea demasiado extenso */
-    padding: 20px 16px;
-  }
+
 
   .evento-card .icono {
     margin-bottom: 12px;
