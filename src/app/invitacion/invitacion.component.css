@@ -104,7 +104,7 @@
 }
 .text-invitacion-reserver {
   font-family: 'Libre Baskerville', serif;
-  font-size: clamp(1.3rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 2vw, 1.35rem);
   letter-spacing: .7px;
   color: #000000;
   line-height: 0;
