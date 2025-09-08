@@ -13,20 +13,30 @@
   text-transform: uppercase;
 }
 
+.cursiva-1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.text-invitacion {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(.7rem, 2vw, 1.35rem);
+  letter-spacing: .2px;
+  color: #000000;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration:none;
+}
+
 .fondo {
-linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
-url('assets/fondo-textura.jpg');
-  background-image: url('/imagenes/fondo.png'); /* ruta relativa o absoluta */
-  /* 2) Repite la textura, NO cover */
+  background-image: url('assets/imagenes/fondo4.jpg'); /* ruta relativa o absoluta */
   background-repeat: repeat;
-
-  /* 3) Tamaño de la “baldosa” de la textura: responsivo */
-  background-size: auto, clamp(140px, 18vw, 260px);
-
-  /* 4) Posición y ajuste */
+  /* Ajusta el tamaño de la baldosa */
+  background-size: clamp(140px, 18vw, 260px) auto;
   background-position: top center;
-
-  /* 5) Que no se reinicie por sección (si el contenedor es alto) */
   min-height: 100vh;
 }
 
