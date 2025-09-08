@@ -42,3 +42,92 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.carrusel{
+  margin: 50px 30px;   /* 50px arriba/abajo, 30px izquierda/derecha */
+  margin: 40px 20px 60px; /* top, lados, bottom */
+  margin: 10px 20px 30px 20px; /* top, right, bottom, left */
+  border: 1.4px solid #a88849;|
+}
+
+
+
+/* Carousel images fill the assigned height */
+c-carousel img {
+  width: 100%;
+  object-fit: cover; /* mantiene proporción */
+  display: block;
+}
+.
+  /* Carousel sizing (compact) */
+c-carousel {
+  height: 360px;           /* altura compacta de escritorio */
+  max-width: 1000px;        /* ancho máximo opcional */
+  margin: 0 auto;          /* centrado */
+}
+c-carousel-inner,
+c-carousel-item { width: 100%; }
+
+
+/* Suaviza la aparición de los captions */
+
+
+/* Efecto Ken Burns (zoom suave) por slide */
+.kenburns {
+  animation: kenburns-zoom 8s ease-in-out both;
+  transform-origin: center center;
+  will-change: transform;
+}
+c-carousel-inner {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes kenburns-zoom {
+  0%   { transform: scale(1) translate3d(0,0,0); }
+  100% { transform: scale(1.08) translate3d(0,0,0); }
+}
+
+/* Anti-flicker for carousel crossfade */
+c-carousel,
+c-carousel-inner,
+c-carousel-item {
+  background: #000; /* evita destello blanco entre imágenes */
+}
+c-carousel-inner,
+c-carousel-item {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+c-carousel-item img {
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* iOS Safari: reduce parpadeos durante opacidad */
+@supports (-webkit-touch-callout: none) {
+  c-carousel-item,
+  c-carousel-inner {
+    -webkit-transform: translateZ(0);
+  }
+}
+
+@media (max-width: 720px) {
+
+  c-carousel {
+    width: auto;
+  }
+
+  c-carousel-item img {
+    width: auto;
+    object-fit: cover; /* mantiene proporción */
+    display: block;
+  }
+}

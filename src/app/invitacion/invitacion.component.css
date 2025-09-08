@@ -77,8 +77,8 @@
 
 .subtitulo-boda {
   font-family: 'Pinyon Script', cursive;
-  font-size: 2.2rem;
-  color: #444;
+  font-size: 4rem;
+  color:#b08d57;
 }
 
 .nombres-boda-1 {
@@ -94,4 +94,20 @@
 }
 .sobre {
   margin-top: 150px; /* baja el sobre, ajusta el valor */
+}
+
+.principal-text {
+  padding-top: 10px;
+  font-family: 'Pinyon Script', cursive;
+  font-size: 2rem;
+  color: #101010;
+}
+.text-invitacion-reserver {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.3rem, 2vw, 1.35rem);
+  letter-spacing: .7px;
+  color: #000000;
+  line-height: 0;
+  text-align: center;
+  text-decoration:none;
 }
